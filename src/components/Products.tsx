@@ -32,7 +32,7 @@ export default function Products() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: idx * 0.2, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-            className={`p-12 lg:p-24 group ${idx !== products.length - 1 ? 'border-r border-[#2b2b2b]' : ''}`}
+            className={`p-12 lg:p-24 group border-[#2b2b2b] ${idx !== products.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''}`}
           >
             <div className="aspect-[4/3] bg-white/5 border border-[#2b2b2b] rounded-2xl flex items-center justify-center text-6xl font-bold text-white/10 mb-6 group-hover:border-[#ff7057]/50 group-hover:bg-white/10 transition-all cursor-pointer overflow-hidden relative">
               {product.id}

@@ -38,8 +38,8 @@ export default function Home() {
         </ScrollVelocityContainer>
       </section>
 
-      <section className="relative bg-black overflow-hidden w-full min-h-[80vh] flex flex-col">
-        <div className="p-12 lg:p-20 border-b border-[#2b2b2b]">
+      <section className="relative bg-black overflow-hidden w-full min-h-[80vh] flex flex-col section-divider">
+        <div className="p-12 lg:p-24 border-b border-[#2b2b2b]">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Building Software for Scale</h2>
         </div>
 

@@ -74,9 +74,10 @@ export default function Metrics() {
           <div 
             key={metric.label} 
             className={cn(
-              "p-12 lg:p-24 flex flex-col justify-center group hover:bg-white/[0.02] transition-all",
-              i !== metrics.length - 1 ? "border-r border-[#2b2b2b]" : "",
-              "border-b lg:border-b-0 border-[#2b2b2b]"
+              "p-12 lg:p-24 flex flex-col justify-center group hover:bg-white/[0.02] transition-all border-b border-[#2b2b2b]",
+              i % 2 === 0 ? "md:border-r" : "md:border-r-0",
+              i % 4 !== 3 ? "lg:border-r" : "lg:border-r-0",
+              "border-[#2b2b2b]"
             )}
           >
             <div className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tighter">

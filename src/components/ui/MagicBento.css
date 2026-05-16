@@ -24,6 +24,14 @@
   transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Ensure padding is consistent on mobile */
+@media (max-width: 767px) {
+  .magic-bento-card {
+    padding: 2rem;
+    min-height: 300px;
+  }
+}
+
 .magic-bento-card:hover {
   background: #050505;
 }
@@ -51,6 +59,7 @@
   top: 2.5rem;
   left: 2.5rem;
   z-index: 10;
+  width: calc(100% - 5rem);
 }
 
 .magic-bento-card__label {
@@ -59,37 +68,45 @@
   letter-spacing: 0.5em;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.15);
-  transition: color 0.4s ease;
+  transition: all 0.4s ease;
   padding-left: 0.5rem;
   border-left: 1px solid rgba(255, 112, 87, 0);
+  display: block;
 }
 
 .magic-bento-card:hover .magic-bento-card__label {
   color: #ff7057;
   border-left: 1px solid #ff7057;
+  padding-left: 1rem;
 }
 
 .magic-bento-card__content {
   display: flex;
   flex-direction: column;
   z-index: 10;
+  margin-top: 4rem; /* Ensure space for header */
 }
 
 .magic-bento-card__title {
   font-weight: 900;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4vw, 2.25rem);
   margin: 0 0 0.75rem;
   letter-spacing: -0.04em;
-  line-height: 1.1;
+  line-height: 1;
   color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
+  transition: color 0.4s ease;
+}
+
+.magic-bento-card:hover .magic-bento-card__title {
+  color: #fff;
 }
 
 .magic-bento-card__description {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.2);
-  max-width: 85%;
+  max-width: 90%;
   transition: color 0.4s ease;
 }
 
@@ -109,39 +126,32 @@
     grid-template-rows: repeat(3, 1fr);
   }
 
-  /* 4x3 Balanced Bento Structure (Total 12 cells) */
-  
-  /* C1: Edge Infrastructure (2x2) - 4 cells */
+  /* 4x3 Balanced Bento Structure */
   .magic-bento-card:nth-child(1) {
     grid-column: span 2;
     grid-row: span 2;
   }
 
-  /* C2: Cloud Native (2x1) - 2 cells */
   .magic-bento-card:nth-child(2) {
     grid-column: 3 / span 2;
     grid-row: 1;
   }
 
-  /* C3: Unified APIs (1x1) - 1 cell */
   .magic-bento-card:nth-child(3) {
     grid-column: 3;
     grid-row: 2;
   }
 
-  /* C4: Zero-Trust (1x1) - 1 cell */
   .magic-bento-card:nth-child(4) {
     grid-column: 4;
     grid-row: 2;
   }
 
-  /* C5: Real-time Sync (2x1) - 2 cells */
   .magic-bento-card:nth-child(5) {
     grid-column: 1 / span 2;
     grid-row: 3;
   }
 
-  /* C6: Modular Core (2x1) - 2 cells */
   .magic-bento-card:nth-child(6) {
     grid-column: 3 / span 2;
     grid-row: 3;
