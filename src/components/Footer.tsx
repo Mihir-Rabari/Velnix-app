@@ -8,15 +8,26 @@ export default function Footer() {
     <footer className="relative bg-black overflow-hidden w-full">
       <div className="grid grid-cols-1 md:grid-cols-4 w-full">
         {/* Brand Col */}
-        <div className="p-12 lg:p-24 border-r border-[#2b2b2b] space-y-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          className="p-12 lg:p-24 border-r border-[#2b2b2b] space-y-6"
+        >
           <div className="text-2xl font-black tracking-tighter uppercase text-white">VedLabs</div>
           <p className="text-secondary text-sm leading-relaxed max-w-xs">
             Engineering excellence for the modern web. Building tools that scale with your global vision.
           </p>
-        </div>
+        </motion.div>
 
         {/* Quick Links */}
-        <div className="p-12 lg:p-24 border-r border-[#2b2b2b]">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.1 }}
+          className="p-12 lg:p-24 border-r border-[#2b2b2b]"
+        >
           <h4 className="text-white font-bold mb-6">Studio</h4>
           <ul className="space-y-4">
             {['What we do', 'Products', 'Our Process', 'Contact'].map((item) => (
@@ -25,10 +36,16 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Social */}
-        <div className="p-12 lg:p-24 border-r border-[#2b2b2b]">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.2 }}
+          className="p-12 lg:p-24 border-r border-[#2b2b2b]"
+        >
           <h4 className="text-white font-bold mb-6">Social</h4>
           <ul className="space-y-4">
             {['Twitter', 'GitHub', 'LinkedIn', 'Instagram'].map((item) => (
@@ -37,10 +54,16 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Newsletter/Legal */}
-        <div className="p-12 lg:p-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.3 }}
+          className="p-12 lg:p-24"
+        >
           <h4 className="text-white font-bold mb-6">Subscribe</h4>
           <div className="flex gap-2">
             <input 
@@ -49,7 +72,7 @@ export default function Footer() {
               className="bg-white/5 border border-[#2b2b2b] rounded-lg px-4 py-2 text-sm w-full focus:border-[#ff7057] outline-none"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Brand Strip */}

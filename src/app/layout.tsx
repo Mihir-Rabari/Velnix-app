@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     "VedLabs creates products that help teams ship faster, think clearer, and build with confidence.",
 };
 
+import { SmoothScroll } from "@/components/ui/SmoothScroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,7 +37,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} antialiased`}
     >
       <body className="min-h-screen bg-[#0a0a0a] text-white font-[family-name:var(--font-geist-sans)]">
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

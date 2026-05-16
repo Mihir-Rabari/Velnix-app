@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import { motion } from "framer-motion";
 import './MagicBento.css';
 
 const cardData = [
@@ -81,7 +81,18 @@ export default function MagicBento() {
   return (
     <div className="card-grid bento-section">
       {cardData.map((card, index) => (
-        <div key={index} className="magic-bento-card group">
+        <motion.div 
+          key={index} 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
+          transition={{ 
+            delay: (index % 4) * 0.1, 
+            duration: 0.8, 
+            ease: [0.23, 1, 0.32, 1] 
+          }}
+          className="magic-bento-card group"
+        >
           {/* Background Decorative Icon */}
           <div className="absolute right-[-10%] bottom-[-10%] w-1/2 h-1/2 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-700 ease-out pointer-events-none text-[#ff7057]">
             {card.icon}
@@ -102,7 +113,7 @@ export default function MagicBento() {
 
           {/* Corner Accent */}
           <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-transparent group-hover:border-[#ff7057]/30 transition-colors duration-300" />
-        </div>
+        </motion.div>
       ))}
     </div>
   );

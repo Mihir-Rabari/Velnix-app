@@ -65,14 +65,27 @@ export default function Metrics() {
   return (
     <section id="about" className="relative bg-black overflow-hidden border-t border-[#2b2b2b]" ref={ref}>
       <div className="p-12 lg:p-24 pb-8 border-b border-[#2b2b2b]">
-        <p className="text-[11px] tracking-[0.4em] uppercase text-white/20 mb-4">Performance Metrics</p>
-        <h2 className="text-4xl md:text-5xl font-black text-white">Global Infrastructure</h2>
+        <div className="overflow-hidden">
+          <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-[11px] tracking-[0.4em] uppercase text-white/20 mb-4"
+          >
+            Performance Metrics
+          </motion.p>
+        </div>
+        <TextifyReveal text="Global Infrastructure" className="text-4xl md:text-5xl font-black text-white" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
         {metrics.map((metric, i) => (
-          <div 
+          <motion.div 
             key={metric.label} 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ delay: i * 0.1, duration: 0.8 }}
             className={cn(
               "p-12 lg:p-24 flex flex-col justify-center group hover:bg-white/[0.02] transition-all border-b border-[#2b2b2b]",
               i % 2 === 0 ? "md:border-r" : "md:border-r-0",
@@ -90,7 +103,7 @@ export default function Metrics() {
             <p className="text-[11px] text-white/30 tracking-[0.2em] uppercase font-bold group-hover:text-[#ff7057] transition-colors">
               {metric.label}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
