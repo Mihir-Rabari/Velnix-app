@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
+import { Syne, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
 });
 
-const serifDisplay = DM_Serif_Display({
-  variable: "--font-serif-display",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "VedLabs — Intelligent Software for Modern Teams",
+  title: "VedLabs — AI-Native Software Studio & Intelligent Infrastructure",
   description:
-    "VedLabs creates products that help teams ship faster, think clearer, and build with confidence.",
+    "VedLabs is an AI-native software studio building intelligent products, scalable infrastructure, developer tools, and communication systems for the next generation of the internet.",
 };
 
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
@@ -34,9 +34,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${serifDisplay.variable} antialiased`}
+      className={`${syne.variable} ${plusJakartaSans.variable} ${spaceMono.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#0a0a0a] text-white font-[family-name:var(--font-geist-sans)]">
+      <body className="min-h-screen bg-[#040407] text-white font-[family-name:var(--font-plus-jakarta-sans)]">
         <SmoothScroll>
           {children}
         </SmoothScroll>

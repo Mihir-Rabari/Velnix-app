@@ -7,7 +7,7 @@ export default function ScaleGrid() {
   return (
     <section className="relative bg-black overflow-hidden w-full">
       <div className="p-12 lg:p-24 pb-8 border-b border-[#2b2b2b]">
-        <Textify text="Building Software for Scale" className="text-4xl md:text-5xl font-bold" />
+        <Textify text="Building Software for Scale" className="text-4xl md:text-5xl font-black font-syne uppercase tracking-tight" />
       </div>
 
       {/* Protected Diagram Area (48px padding) */}
