@@ -56,19 +56,26 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-6 font-syne uppercase tracking-wider text-sm">Social</h4>
           <ul className="space-y-4 font-sans">
             {[
-              { label: 'GitHub', href: 'https://github.com/' },
-              { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mihir-rabari/' },
-              { label: 'Research', href: '/research' },
+              { label: 'LinkedIn', href: 'https://www.linkedin.com/company/the-velnix/' },
+              { label: 'Instagram', href: 'https://www.instagram.com/the_velnix/' },
+              { label: 'Email', href: 'mailto:hello@thevelnix.com' },
               { label: 'Blog', href: '/blog' }
             ].map((item) => (
               <li key={item.label}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-[#ffffff] transition-colors text-sm">{item.label}</a>
+                <a
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="text-zinc-400 hover:text-[#ffffff] transition-colors text-sm"
+                >
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Newsletter/Subscribe */}
+        {/* Contact */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,14 +83,17 @@ export default function Footer() {
           transition={{ delay: 0.3 }}
           className="p-8 md:p-10 lg:p-12 xl:p-16"
         >
-          <h4 className="text-white font-bold mb-6 font-syne uppercase tracking-wider text-sm">Subscribe</h4>
-          <div className="flex gap-2">
-            <input 
-              type="email" 
-              placeholder="email@example.com"
-              className="bg-white/[0.02] border border-white/10 rounded-full px-4 py-2.5 text-sm w-full focus:border-[#ffffff] outline-none placeholder:text-zinc-600 text-white transition-all font-sans"
-            />
-          </div>
+          <h4 className="text-white font-bold mb-6 font-syne uppercase tracking-wider text-sm">Contact</h4>
+          <p className="text-zinc-500 text-xs leading-relaxed mb-4 font-sans">
+            New products, technical partnerships, and ambitious systems.
+          </p>
+          <a
+            href="mailto:hello@thevelnix.com"
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors font-sans break-all"
+          >
+            hello@thevelnix.com
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </motion.div>
       </div>
 

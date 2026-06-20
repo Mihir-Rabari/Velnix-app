@@ -105,69 +105,37 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  color: #fff;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.045) 48%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.22),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
-    0 10px 30px rgba(0, 0, 0, 0.32);
-  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+  border: 1px solid #f5f5f5;
+  border-radius: 12px;
+  color: #050505;
+  background: #f5f5f5;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
 .velnix-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    110deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.1) 46%,
-    rgba(255, 255, 255, 0.18) 50%,
-    rgba(255, 255, 255, 0.1) 54%,
-    transparent 80%
-  );
-  transform: translateX(-130%);
-  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+  content: none;
 }
 
 .velnix-button:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.14) 0%,
-    rgba(255, 255, 255, 0.065) 50%,
-    rgba(255, 255, 255, 0.025) 100%
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
-    0 14px 34px rgba(0, 0, 0, 0.42);
-}
-
-.velnix-button:hover::before {
-  transform: translateX(130%);
+  border-color: #fff;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.38);
 }
 
 .velnix-button-secondary {
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.025);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(5, 5, 5, 0.35);
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
 }
 
 .velnix-button-secondary:hover {
   color: #fff;
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: none;
 }
 
 .grid-divider-r {

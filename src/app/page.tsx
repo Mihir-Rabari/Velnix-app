@@ -4,6 +4,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 import Products from "@/components/Products";
 import MagicBento from "@/components/ui/MagicBento";
 import Metrics from "@/components/Metrics";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -54,6 +55,8 @@ export default function Home() {
       </section>
 
       <Metrics />
+
+      <FAQ />
 
       <div className="section-divider">
         <CTA />
