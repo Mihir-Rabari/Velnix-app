@@ -26,7 +26,7 @@ export const teamMembers: TeamMember[] = [
     id: "mihir-rabari",
     name: "Mihir Rabari",
     role: "Founder & Software Engineer",
-    tagline: "Founder & Software Engineer at VedLabs",
+    tagline: "Founder & Software Engineer at The Velnix",
     shortBio: "Mihir Rabari is a builder focused on AI-native systems, scalable infrastructure, workflow automation, and developer-first products.",
     detailedBio: [
       "Mihir Rabari is a builder focused on AI-native systems, scalable infrastructure, workflow automation, and developer-first products. His work spans communication intelligence, machine learning systems, security tooling, and modern web infrastructure.",
@@ -52,12 +52,12 @@ export const teamMembers: TeamMember[] = [
     id: "alex-chen",
     name: "Alex Chen",
     role: "Founding Engineer",
-    tagline: "Founding Systems Engineer at VedLabs",
+    tagline: "Founding Systems Engineer at The Velnix",
     shortBio: "Alex focuses on high-performance distributed systems, database internals, and low-latency stream processing engines.",
     detailedBio: [
-      "Alex Chen is a founding engineer at VedLabs, specializing in low-latency systems and distributed consensus algorithms.",
-      "Before joining VedLabs, Alex was a core contributor to distributed datastores and high-throughput streaming systems, building data layers that scale to millions of requests per second.",
-      "At VedLabs, Alex leads the developer infrastructure R&D, designing the real-time execution kernels that power our agent networks."
+      "Alex Chen is a founding engineer at The Velnix, specializing in low-latency systems and distributed consensus algorithms.",
+      "Before joining The Velnix, Alex was a core contributor to distributed datastores and high-throughput streaming systems, building data layers that scale to millions of requests per second.",
+      "At The Velnix, Alex leads the developer infrastructure R&D, designing the real-time execution kernels that power our agent networks."
     ],
     socials: {
       linkedin: "https://linkedin.com/in/alex-chen",
@@ -78,7 +78,7 @@ export const teamMembers: TeamMember[] = [
     id: "sarah-jenkins",
     name: "Sarah Jenkins",
     role: "Lead AI Research Engineer",
-    tagline: "Lead AI Research Engineer at VedLabs",
+    tagline: "Lead AI Research Engineer at The Velnix",
     shortBio: "Sarah designs agentic workflows, multi-agent coordination frameworks, and optimizes large cognitive pipelines.",
     detailedBio: [
       "Sarah Jenkins is our Lead AI Research Engineer, crafting state-of-the-art cognitive workflows and agentic coordination logic.",

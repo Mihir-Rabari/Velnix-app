@@ -19,9 +19,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VedLabs — AI-Native Software Studio & Intelligent Infrastructure",
+  title: "The Velnix — AI-Native Software Studio & Intelligent Infrastructure",
   description:
-    "VedLabs is an AI-native software studio building intelligent products, scalable infrastructure, developer tools, and communication systems for the next generation of the internet.",
+    "The Velnix is an AI-native software studio building intelligent products, scalable infrastructure, developer tools, and communication systems for the next generation of the internet.",
 };
 
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${plusJakartaSans.variable} ${spaceMono.variable} antialiased`}
     >
-      <body className="min-h-screen bg-[#040407] text-white font-[family-name:var(--font-plus-jakarta-sans)]">
+      <body className="min-h-screen bg-[#050505] text-white font-[family-name:var(--font-plus-jakarta-sans)]">
         <SmoothScroll>
           {children}
         </SmoothScroll>

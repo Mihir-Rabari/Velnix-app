@@ -26,12 +26,12 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="relative overflow-hidden bg-[#040407] w-full min-h-[90vh] flex flex-col justify-center">
+    <section id="products" className="relative overflow-hidden bg-[#050505] w-full min-h-[90vh] flex flex-col justify-center">
       
       {/* Background Red Mesh blur */}
-      <div className="absolute bottom-[20%] right-[-10%] w-[400px] h-[400px] bg-[#ff7057]/3 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[400px] h-[400px] bg-[#ffffff]/3 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="flex flex-col md:flex-row md:items-end justify-between px-8 md:px-16 lg:px-24 pb-8 border-b border-white/10 w-full">
+      <div className="flex flex-col md:flex-row md:items-end justify-between px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -43,7 +43,7 @@ export default function Products() {
           </motion.p>
           
           <h2 className="text-3xl md:text-5xl font-black font-syne uppercase tracking-tight text-white leading-[1.15]">
-            Intelligent software <span className="bg-gradient-to-r from-white via-white to-[#ff7057] bg-clip-text text-transparent">engineered for impact</span>
+            Intelligent software <span className="bg-gradient-to-r from-white via-white to-[#ffffff] bg-clip-text text-transparent">engineered for impact</span>
           </h2>
         </div>
 
@@ -64,7 +64,7 @@ export default function Products() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ delay: idx * 0.2, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-            className={`p-10 lg:p-14 group border-white/10 hover:bg-white/[0.01] transition-all duration-300 ${
+            className={`p-6 sm:p-8 lg:p-12 xl:p-14 group border-white/10 hover:bg-white/[0.01] transition-all duration-300 ${
               idx !== products.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''
             }`}
           >
@@ -75,7 +75,7 @@ export default function Products() {
             <h3 className="text-xl font-bold font-syne uppercase tracking-tight mb-1 text-white/80 group-hover:text-white transition-colors">
               {product.title}
             </h3>
-            <p className="text-[#ff7057] text-[9px] uppercase font-bold tracking-wider font-mono mb-4">
+            <p className="text-[#ffffff] text-[9px] uppercase font-bold tracking-wider font-mono mb-4">
               {product.tagline}
             </p>
             <p className="text-zinc-400 text-sm font-sans leading-relaxed">

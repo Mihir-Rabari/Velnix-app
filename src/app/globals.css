@@ -2,15 +2,15 @@
 
 :root {
   /* === Geometric Design System (Dark Mode) === */
-  --bg-base: #040407;
+  --bg-base: #050505;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.6);
-  --accent: #ff7057;
+  --accent: #ffffff;
   
   /* Line Hierarchy */
-  --border-strong: #161622;
-  --border-soft: rgba(35, 35, 55, 0.6);
-  --border-micro: rgba(35, 35, 55, 0.2);
+  --border-strong: #1a1a1a;
+  --border-soft: rgba(35, 35, 35, 0.6);
+  --border-micro: rgba(35, 35, 35, 0.2);
 }
 
 @theme {
@@ -29,6 +29,7 @@ body {
   background: var(--bg-base);
   color: var(--text-primary);
   font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  overflow-x: clip;
 }
 
 /* Grain texture overlay — alive feeling */
@@ -43,13 +44,13 @@ body {
   z-index: 1;
 }
 
-/* Coral glow orb */
+/* Monochrome glow orb */
 .glow-orb {
   position: absolute;
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 112, 87, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
   pointer-events: none;
   filter: blur(80px);
 }
@@ -68,7 +69,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(255, 112, 87, 0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Focus */
@@ -94,6 +95,79 @@ body {
 
 .section-divider {
   border-top: 1px solid var(--border-strong);
+}
+
+/* Monochrome action system */
+.velnix-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.045) 48%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.32);
+  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+.velnix-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.1) 46%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.1) 54%,
+    transparent 80%
+  );
+  transform: translateX(-130%);
+  transition: transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.velnix-button:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.065) 50%,
+    rgba(255, 255, 255, 0.025) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 14px 34px rgba(0, 0, 0, 0.42);
+}
+
+.velnix-button:hover::before {
+  transform: translateX(130%);
+}
+
+.velnix-button-secondary {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.velnix-button-secondary:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 .grid-divider-r {

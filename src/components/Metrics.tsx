@@ -51,7 +51,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
     mouseY.set(e.clientY - rect.top);
   };
 
-  const spotlightBg = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, rgba(255, 112, 87, 0.05) 0%, rgba(255, 255, 255, 0.01) 60%, transparent 100%)`;
+  const spotlightBg = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 60%, transparent 100%)`;
 
   return (
     <motion.div
@@ -63,7 +63,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "relative overflow-hidden p-12 lg:p-16 flex flex-col justify-between group transition-all duration-500 bg-white/[0.005] hover:bg-white/[0.015] border-b border-white/10 select-none cursor-pointer",
+        "relative overflow-hidden p-8 md:p-10 lg:p-12 xl:p-16 flex flex-col justify-between group transition-all duration-500 bg-white/[0.005] hover:bg-white/[0.015] border-b border-white/10 select-none cursor-pointer",
         cardIndex % 2 === 0 ? "md:border-r" : "md:border-r-0",
         cardIndex % 4 !== 3 ? "lg:border-r" : "lg:border-r-0",
         "border-white/10"
@@ -78,7 +78,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
       <div className="relative z-10 flex flex-col justify-between h-full">
         <div>
           {/* Index Counter */}
-          <div className="font-mono text-xs font-bold text-[#ff7057] tracking-wider mb-8 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="font-mono text-xs font-bold text-[#ffffff] tracking-wider mb-8 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
             // {index}
           </div>
 
@@ -88,7 +88,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
           </h3>
 
           {/* Tagline */}
-          <div className="font-mono text-[9px] font-bold text-zinc-500 tracking-[0.2em] uppercase mb-6 group-hover:text-[#ff7057]/80 transition-colors duration-300">
+          <div className="font-mono text-[9px] font-bold text-zinc-500 tracking-[0.2em] uppercase mb-6 group-hover:text-[#ffffff]/80 transition-colors duration-300">
             {tagline}
           </div>
         </div>
@@ -106,8 +106,8 @@ export default function Metrics() {
   const ref = useRef(null);
 
   return (
-    <section id="about" className="relative bg-[#040407] overflow-hidden border-t border-white/10" ref={ref}>
-      <div className="px-8 md:px-16 lg:px-24 pb-8 border-b border-white/10 w-full">
+    <section id="about" className="relative bg-[#050505] overflow-hidden border-t border-white/10" ref={ref}>
+      <div className="px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full">
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function Metrics() {
         </motion.p>
         
         <h2 className="text-3xl md:text-5xl font-black font-syne uppercase tracking-tight text-white leading-[1.15]">
-          Studio <span className="bg-gradient-to-r from-white via-white to-[#ff7057] bg-clip-text text-transparent">Convictions</span>
+          Studio <span className="bg-gradient-to-r from-white via-white to-[#ffffff] bg-clip-text text-transparent">Convictions</span>
         </h2>
       </div>
 

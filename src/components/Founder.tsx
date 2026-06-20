@@ -26,11 +26,11 @@ export default function Founder() {
   };
 
   return (
-    <section id="founder" className="relative overflow-hidden border-t border-white/10 bg-[#040407]">
+    <section id="founder" className="relative overflow-hidden border-t border-white/10 bg-[#050505]">
       <div className="grid grid-cols-1 lg:grid-cols-[62%_1fr] relative">
         
         {/* Left Column (Text & Bio) */}
-        <div className="border-r border-white/10 flex flex-col bg-[#040407]/40">
+        <div className="border-r border-white/10 flex flex-col bg-[#050505]/40">
           <div className="p-12 lg:p-24 pb-8 border-b border-white/10">
             <motion.p 
               initial={{ opacity: 0, y: 10 }}
@@ -41,8 +41,8 @@ export default function Founder() {
               Meet the Founder
             </motion.p>
             <Textify text="Mihir Rabari" className="text-4xl md:text-5xl font-black font-syne uppercase tracking-tight text-white mb-2" />
-            <p className="text-sm font-mono text-[#ff7057] uppercase tracking-wider font-bold">
-              Founder & Software Engineer at VedLabs
+            <p className="text-sm font-mono text-[#ffffff] uppercase tracking-wider font-bold">
+              Founder & Software Engineer at The Velnix
             </p>
           </div>
           
@@ -80,11 +80,9 @@ export default function Founder() {
                   whileHover={{ scale: 1.04, scaleX: 1.06, scaleY: 0.95 }}
                   whileTap={{ scale: 0.96, scaleX: 0.92, scaleY: 1.08 }}
                   transition={{ type: "spring", stiffness: 400, damping: 14 }}
-                  className="relative overflow-hidden group px-8 py-3 text-white font-extrabold text-xs uppercase tracking-[0.2em] font-sans rounded-full border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.08),inset_0_-1px_1px_rgba(255,255,255,0.02),0_8px_20px_rgba(0,0,0,0.4)] hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300 ease-out cursor-pointer flex items-center justify-center"
+                  className="velnix-button velnix-button-secondary group min-h-11 px-8 font-extrabold text-xs uppercase tracking-[0.2em] font-sans cursor-pointer"
                 >
-                  <span className="relative z-30">Connect on LinkedIn</span>
-                  <span className="absolute top-[2.5px] left-[6px] right-[6px] h-[38%] rounded-full bg-gradient-to-b from-white/20 via-white/5 to-transparent pointer-events-none opacity-90 group-hover:opacity-100 transition-all duration-300 z-10" />
-                  <span className="absolute inset-0 w-[50%] h-full -left-[75%] skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none z-20 group-hover:animate-[glass-shimmer_0.85s_cubic-bezier(0.16,1,0.3,1)_forwards]" />
+                  <span className="relative z-10">Connect on LinkedIn</span>
                 </motion.a>
               </motion.div>
             </motion.div>
@@ -92,7 +90,7 @@ export default function Founder() {
         </div>
 
         {/* Right Column (Developer Telemetry Card) */}
-        <div className="p-12 lg:p-24 bg-[#040407] flex items-center justify-center relative">
+        <div className="p-12 lg:p-24 bg-[#050505] flex items-center justify-center relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -104,7 +102,7 @@ export default function Founder() {
               setIsHovered(false);
               setOrbPos({ x: 0, y: 0 });
             }}
-            className="w-full aspect-square md:aspect-video bg-[#040407]/45 backdrop-blur-[24px] border border-white/[0.08] border-t-white/[0.15] rounded-[24px] relative overflow-hidden shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.15),inset_0_-1px_1px_rgba(255,255,255,0.05),0_30px_60px_rgba(0,0,0,0.6)] group hover:border-white/20 transition-all duration-500 cursor-pointer"
+            className="w-full aspect-square md:aspect-video bg-[#050505]/45 backdrop-blur-[24px] border border-white/[0.08] border-t-white/[0.15] rounded-[24px] relative overflow-hidden shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.15),inset_0_-1px_1px_rgba(255,255,255,0.05),0_30px_60px_rgba(0,0,0,0.6)] group hover:border-white/20 transition-all duration-500 cursor-pointer"
           >
             {/* Tech mesh accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] via-transparent to-white/[0.01] opacity-60 pointer-events-none" />
@@ -136,13 +134,13 @@ export default function Founder() {
 
             {/* Window control buttons */}
             <div className="absolute top-4 left-4 flex gap-1.5 z-10">
-              <span className="w-2.5 h-2.5 rounded-full bg-red-500/40 border border-red-500/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/40 border border-yellow-500/20" />
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500/40 border border-green-500/20" />
+              <span className="w-2.5 h-2.5 rounded-full bg-zinc-300/40 border border-zinc-300/20" />
+              <span className="w-2.5 h-2.5 rounded-full bg-zinc-500/40 border border-zinc-500/20" />
+              <span className="w-2.5 h-2.5 rounded-full bg-zinc-700/40 border border-zinc-700/20" />
             </div>
 
             <div className="absolute top-4 right-4 z-10">
-              <span className="text-[10px] font-mono text-[#ff7057]/70 tracking-widest uppercase font-bold">
+              <span className="text-[10px] font-mono text-[#ffffff]/70 tracking-widest uppercase font-bold">
                 SYSTEM TELEMETRY
               </span>
             </div>
@@ -158,12 +156,12 @@ export default function Founder() {
                 className="space-y-4"
               >
                 <div className="text-white font-bold">&gt; telemetry init --active</div>
-                <div className="grid grid-cols-[80px_1fr] gap-2 border-l border-[#ff7057]/20 pl-4 py-2 bg-white/[0.01] rounded-lg">
+                <div className="grid grid-cols-[80px_1fr] gap-2 border-l border-[#ffffff]/20 pl-4 py-2 bg-white/[0.01] rounded-lg">
                   <span className="text-zinc-600 font-semibold">FOUNDER:</span>
                   <span className="text-zinc-300">"Mihir Rabari"</span>
                   
                   <span className="text-zinc-600 font-semibold">ROLE:</span>
-                  <span className="text-[#ff7057] font-semibold">"System Architect"</span>
+                  <span className="text-[#ffffff] font-semibold">"System Architect"</span>
 
                   <span className="text-zinc-600 font-semibold">FOCUS:</span>
                   <span className="text-zinc-300">["AI Infrastructure", "Autonomous Workflows"]</span>
@@ -174,8 +172,8 @@ export default function Founder() {
                   <span className="text-zinc-600 font-semibold">CORE:</span>
                   <span className="text-zinc-400">"Next.js / TypeScript / Python / WASM / Cloudflare"</span>
                 </div>
-                <div className="flex items-center gap-2 text-green-500/80 font-bold">
-                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+                <div className="flex items-center gap-2 text-white/70 font-bold">
+                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
                   <span>STATUS // ONLINE_R&D_MODE</span>
                 </div>
               </motion.div>

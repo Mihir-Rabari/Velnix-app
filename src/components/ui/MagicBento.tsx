@@ -100,8 +100,8 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
   };
 
   // Specular Liquid Glass dynamic spotlights (highly performant via Framer template wrappers)
-  const spotlightBg = useMotionTemplate`radial-gradient(280px circle at ${mouseX}px ${mouseY}px, rgba(255, 112, 87, 0.06) 0%, rgba(255, 255, 255, 0.01) 50%, transparent 100%)`;
-  const spotlightBorder = useMotionTemplate`radial-gradient(160px circle at ${mouseX}px ${mouseY}px, rgba(255, 112, 87, 0.22) 0%, rgba(255, 255, 255, 0.07) 50%, transparent 100%)`;
+  const spotlightBg = useMotionTemplate`radial-gradient(280px circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 50%, transparent 100%)`;
+  const spotlightBorder = useMotionTemplate`radial-gradient(160px circle at ${mouseX}px ${mouseY}px, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.07) 50%, transparent 100%)`;
 
   return (
     <div 
@@ -133,7 +133,7 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="relative overflow-hidden w-full h-full bg-[#08080b]/85 backdrop-blur-xl rounded-[28px] p-[1px] transition-all duration-300 cursor-pointer select-none group"
+        className="relative overflow-hidden w-full h-full bg-[#080808]/85 backdrop-blur-xl rounded-[28px] p-[1px] transition-all duration-300 cursor-pointer select-none group"
       >
         {/* Dynamic Glowing Border Spotlight */}
         <motion.div
@@ -142,7 +142,7 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
         />
 
         {/* Inner Card Panel */}
-        <div className="relative z-10 w-full h-full rounded-[27px] bg-[#09090c]/95 p-8 md:p-10 flex flex-col items-center justify-center text-center overflow-hidden border border-white/[0.04]">
+        <div className="relative z-10 w-full h-full rounded-[27px] bg-[#090909]/95 p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center text-center overflow-hidden border border-white/[0.04]">
           {/* Dynamic Background Spotlight Sheen */}
           <motion.div
             className="absolute inset-0 pointer-events-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -161,7 +161,7 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
               scale: isHovered ? 1.08 : 1
             }}
             transition={{ type: "spring", stiffness: 100, damping: 16 }}
-            className="w-14 h-14 md:w-16 md:h-16 text-[#ff7057]/60 group-hover:text-[#ff7057] transition-all duration-500 mb-5 flex items-center justify-center pointer-events-none z-10"
+            className="w-14 h-14 md:w-16 md:h-16 text-[#ffffff]/60 group-hover:text-[#ffffff] transition-all duration-500 mb-5 flex items-center justify-center pointer-events-none z-10"
           >
             <div className="w-full h-full">
               {icon}
@@ -170,7 +170,7 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
 
           <div className="relative z-10 flex flex-col items-center w-full">
             {/* Label header with pill layout */}
-            <div className="border border-white/10 group-hover:border-[#ff7057]/30 px-3 py-1 rounded-full bg-white/[0.02] group-hover:bg-[#ff7057]/5 transition-all duration-300 mb-4 inline-block">
+            <div className="border border-white/10 group-hover:border-[#ffffff]/30 px-3 py-1 rounded-full bg-white/[0.02] group-hover:bg-[#ffffff]/5 transition-all duration-300 mb-4 inline-block">
               <span className="font-mono text-[9px] tracking-[0.25em] uppercase text-zinc-500 group-hover:text-white transition-colors duration-300">
                 {label}
               </span>
@@ -192,7 +192,7 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
 
 export default function MagicBento() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8 md:px-16 lg:px-24 py-12 w-full items-stretch">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-6 md:px-16 lg:px-24 py-10 md:py-12 w-full items-stretch">
       {cardData.map((card, index) => {
         let gridClass = "lg:col-span-1 lg:row-span-1";
         if (index === 0) {

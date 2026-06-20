@@ -19,16 +19,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!member) {
     return {
-      title: "Team Member Dossier | VedLabs",
+      title: "Team Member Dossier | The Velnix",
       description: "Explore the background and stack profile of our systems builders.",
     };
   }
 
   return {
-    title: `${member.name} | ${member.role} | VedLabs`,
+    title: `${member.name} | ${member.role} | The Velnix`,
     description: member.shortBio,
     openGraph: {
-      title: `${member.name} | ${member.role} | VedLabs`,
+      title: `${member.name} | ${member.role} | The Velnix`,
       description: member.shortBio,
       type: "profile",
     },

@@ -49,19 +49,19 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
 
   return (
     <main 
-      className="min-h-screen bg-[#040407] text-white selection:bg-[#ff7057]/20 selection:text-white relative flex flex-col"
+      className="min-h-screen bg-[#050505] text-white selection:bg-[#ffffff]/20 selection:text-white relative flex flex-col overflow-x-clip"
     >
       <Navbar />
 
       {/* Futuristic Mesh Background & Red Orbs */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:40px_40px]" />
-        <div className="absolute top-[30%] left-[5%] w-[450px] h-[450px] bg-gradient-to-tr from-[#ff7057]/8 to-transparent blur-[140px] rounded-full animate-pulse" style={{ animationDuration: "14s" }} />
-        <div className="absolute bottom-[10%] right-[5%] w-[550px] h-[550px] bg-gradient-to-tr from-purple-500/5 to-transparent blur-[160px] rounded-full" />
+        <div className="absolute top-[30%] left-[5%] w-[450px] h-[450px] bg-gradient-to-tr from-[#ffffff]/8 to-transparent blur-[140px] rounded-full animate-pulse" style={{ animationDuration: "14s" }} />
+        <div className="absolute bottom-[10%] right-[5%] w-[550px] h-[550px] bg-gradient-to-tr from-white/5 to-transparent blur-[160px] rounded-full" />
       </div>
 
       {/* Back button container */}
-      <div className="relative z-10 pt-28 md:pt-36 px-6 max-w-6xl mx-auto w-full">
+      <div className="relative z-10 pt-24 md:pt-32 lg:pt-36 px-6 max-w-6xl mx-auto w-full">
         <Link 
           href="/team" 
           className="inline-flex items-center gap-2 group text-xs font-mono font-bold text-zinc-500 hover:text-white transition-colors duration-300 uppercase tracking-widest"
@@ -74,22 +74,22 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
       </div>
 
       {/* Main Dossier Split Grid */}
-      <section className="relative z-10 px-6 pb-32 pt-6 max-w-6xl mx-auto w-full flex-grow grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-12 lg:gap-16">
+      <section className="relative z-10 px-6 pb-20 md:pb-28 lg:pb-32 pt-6 max-w-6xl mx-auto w-full flex-grow grid grid-cols-1 lg:grid-cols-[38%_1fr] gap-10 lg:gap-16">
         
         {/* Left Column - Diagnostics Frame */}
         <div className="flex flex-col gap-8">
-          <div className="bg-white/[0.005] backdrop-blur-md border border-white/[0.06] border-t-white/[0.12] rounded-[32px] p-8 relative overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] group">
+          <div className="bg-white/[0.005] backdrop-blur-md border border-white/[0.06] border-t-white/[0.12] rounded-[24px] md:rounded-[32px] p-6 md:p-8 relative overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.6)] group">
             
             {/* Top decorative lines */}
             <div className="absolute top-4 left-6 right-6 flex justify-between items-center z-10">
               <span className="text-[9px] font-mono text-zinc-600 font-bold uppercase tracking-widest">// DOSSIER //</span>
-              <span className="w-2 h-2 rounded-full bg-[#ff7057] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse" />
             </div>
 
             {/* Custom Animated Grid Radar Scanning Visual */}
             <div className="aspect-square w-full rounded-[24px] bg-black/40 border border-white/[0.04] mt-4 relative overflow-hidden flex items-center justify-center">
               {/* Futuristic scanning sweep animation */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,112,87,0.02)_0%,rgba(0,0,0,0)_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.02)_0%,rgba(0,0,0,0)_70%)]" />
               
               {/* Radar ring SVGs */}
               <svg className="w-4/5 h-4/5 text-zinc-800 opacity-80" viewBox="0 0 100 100">
@@ -105,12 +105,12 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
               <motion.div 
                 animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.7, 0.3] }}
                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="absolute w-24 h-24 rounded-full border border-[#ff7057]/15 flex items-center justify-center"
+                className="absolute w-24 h-24 rounded-full border border-[#ffffff]/15 flex items-center justify-center"
               />
               <motion.div 
                 animate={{ scale: [1, 1.6, 1], opacity: [0.1, 0.5, 0.1] }}
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-                className="absolute w-44 h-44 rounded-full border border-[#ff7057]/5"
+                className="absolute w-44 h-44 rounded-full border border-[#ffffff]/5"
               />
 
               {/* Glowing signal node */}
@@ -120,7 +120,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
                   y: [0, -30, 20, -10, 0]
                 }}
                 transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-                className="absolute w-2.5 h-2.5 rounded-full bg-[#ff7057] shadow-[0_0_12px_#ff7057] z-10"
+                className="absolute w-2.5 h-2.5 rounded-full bg-[#ffffff] shadow-[0_0_12px_#ffffff] z-10"
               />
 
               <div className="absolute bottom-4 left-6 right-6 flex justify-between font-mono text-[9px] text-zinc-600">
@@ -134,7 +134,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
               <h1 className="text-3xl font-black font-syne uppercase tracking-tight text-white mb-2">
                 {member.name}
               </h1>
-              <p className="text-xs font-mono text-[#ff7057] uppercase tracking-widest font-bold">
+              <p className="text-xs font-mono text-[#ffffff] uppercase tracking-widest font-bold">
                 {member.role}
               </p>
 
@@ -150,8 +150,8 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-zinc-600 font-bold">SYSTEM STATUS:</span>
-                  <span className="text-green-500 font-bold flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-white font-bold flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                     {member.telemetry.status}
                   </span>
                 </div>
@@ -169,7 +169,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex-grow py-3 rounded-xl border border-white/10 hover:border-[#ff7057]/60 flex items-center justify-center gap-2 bg-white/[0.01] hover:bg-[#ff7057]/5 text-zinc-400 hover:text-white transition-all duration-300 font-mono text-[10px] font-bold uppercase tracking-widest"
+                  className="flex-grow py-3 rounded-xl border border-white/10 hover:border-[#ffffff]/60 flex items-center justify-center gap-2 bg-white/[0.01] hover:bg-[#ffffff]/5 text-zinc-400 hover:text-white transition-all duration-300 font-mono text-[10px] font-bold uppercase tracking-widest"
                 >
                   <LinkedInIcon />
                   LinkedIn
@@ -181,7 +181,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-12 py-3 rounded-xl border border-white/10 hover:border-[#ff7057]/60 flex items-center justify-center bg-white/[0.01] hover:bg-[#ff7057]/5 text-zinc-400 hover:text-white transition-all duration-300"
+                  className="w-12 py-3 rounded-xl border border-white/10 hover:border-[#ffffff]/60 flex items-center justify-center bg-white/[0.01] hover:bg-[#ffffff]/5 text-zinc-400 hover:text-white transition-all duration-300"
                 >
                   <TwitterIcon />
                 </motion.a>
@@ -192,7 +192,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-12 py-3 rounded-xl border border-white/10 hover:border-[#ff7057]/60 flex items-center justify-center bg-white/[0.01] hover:bg-[#ff7057]/5 text-zinc-400 hover:text-white transition-all duration-300"
+                  className="w-12 py-3 rounded-xl border border-white/10 hover:border-[#ffffff]/60 flex items-center justify-center bg-white/[0.01] hover:bg-[#ffffff]/5 text-zinc-400 hover:text-white transition-all duration-300"
                 >
                   <InstagramIcon />
                 </motion.a>
@@ -206,7 +206,7 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
           
           {/* Biography Bio Block */}
           <div>
-            <h2 className="text-xs font-mono font-bold tracking-[0.2em] text-[#ff7057] uppercase mb-4">
+            <h2 className="text-xs font-mono font-bold tracking-[0.2em] text-[#ffffff] uppercase mb-4">
               // BIOGRAPHIC FILE
             </h2>
             <div className="space-y-6 text-zinc-400 text-base md:text-lg leading-relaxed font-sans max-w-3xl">
@@ -224,14 +224,14 @@ export default function TeamMemberClient({ member }: TeamMemberClientProps) {
 
           {/* Stacks Grid */}
           <div>
-            <h2 className="text-xs font-mono font-bold tracking-[0.2em] text-[#ff7057] uppercase mb-4">
+            <h2 className="text-xs font-mono font-bold tracking-[0.2em] text-[#ffffff] uppercase mb-4">
               // ACTIVE CORE TECH STACK
             </h2>
             <div className="flex flex-wrap gap-2.5 max-w-2xl">
               {member.skills.map((skill) => (
                 <motion.span
                   key={skill}
-                  whileHover={{ scale: 1.05, borderColor: "rgba(255,112,87,0.4)" }}
+                  whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.4)" }}
                   className="text-xs font-mono font-bold px-4 py-2 bg-white/[0.02] border border-white/10 rounded-xl text-zinc-300 select-none cursor-default transition-colors duration-300 hover:text-white"
                 >
                   {skill}

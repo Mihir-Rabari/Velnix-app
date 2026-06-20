@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,13 +25,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="flex h-20 items-center justify-between">
           {/* Logo — lowercase serif like reference */}
-          <a
-            href="#"
-            className="text-[22px] italic text-white/90"
-            style={{ fontFamily: "var(--font-serif-display)" }}
-          >
-            vedlabs
-          </a>
+          <BrandLogo imageClassName="h-8 w-auto" />
 
           {/* Right side — social + CTA */}
           <div className="hidden md:flex items-center gap-5">

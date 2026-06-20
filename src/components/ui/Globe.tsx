@@ -18,9 +18,9 @@ const GLOBE_CONFIG: COBEOptions = {
   diffuse: 1.5,
   mapSamples: 16000,
   mapBrightness: 3.5,
-  baseColor: [0.15, 0.15, 0.18], // Sleek charcoal base color
-  markerColor: [255 / 255, 112 / 255, 87 / 255], // Coral-red brand color (#ff7057)
-  glowColor: [255 / 255, 112 / 255, 87 / 255], // Soft brand glowing halo
+  baseColor: [0.12, 0.12, 0.12],
+  markerColor: [1, 1, 1],
+  glowColor: [0.72, 0.72, 0.72],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.08 }, // Mumbai/India marker

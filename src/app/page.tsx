@@ -12,7 +12,7 @@ import { ScrollVelocityContainer, ScrollVelocityRow } from "@/components/ui/Scro
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#040407] text-white selection:bg-[#ff7057]/20 selection:text-white">
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-[#ffffff]/20 selection:text-white">
       <Navbar />
       
       <Hero />
@@ -27,7 +27,7 @@ export default function Home() {
       
       {/* Banner Section 1 */}
       <section className="relative py-16 bg-black section-divider overflow-hidden flex flex-col justify-center gap-2">
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#ff7057] via-transparent to-transparent" />
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#ffffff] via-transparent to-transparent" />
         <ScrollVelocityContainer className="text-5xl md:text-8xl font-black tracking-tighter uppercase text-white/10 italic leading-none">
           <ScrollVelocityRow baseVelocity={3} direction={1}>
             AI-Native Systems • Modern Infrastructure • Intelligent Software •&nbsp;
@@ -38,13 +38,13 @@ export default function Home() {
         </ScrollVelocityContainer>
       </section>
 
-      <section className="relative bg-[#040407] overflow-hidden w-full flex flex-col section-divider">
-        <div className="px-8 md:px-16 lg:px-24 pb-8 border-b border-white/10 w-full text-left">
+      <section className="relative bg-[#050505] overflow-hidden w-full flex flex-col section-divider">
+        <div className="px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full text-left">
           <p className="text-xs font-mono font-bold tracking-[0.25em] text-zinc-500 uppercase mb-4">
             // ARCHITECTURAL MATRIX
           </p>
           <h2 className="text-3xl md:text-5xl font-black font-syne uppercase tracking-tight text-white leading-[1.15]">
-            Engineering software for <span className="bg-gradient-to-r from-white via-white to-[#ff7057] bg-clip-text text-transparent">humans, agents, and scale</span>
+            Engineering software for <span className="bg-gradient-to-r from-white via-white to-[#ffffff] bg-clip-text text-transparent">humans, agents, and scale</span>
           </h2>
         </div>
 

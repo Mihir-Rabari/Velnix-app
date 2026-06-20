@@ -30,13 +30,13 @@ export default function ScaleGrid() {
           transition={{ duration: 0.8 }}
           className="col-span-4 row-span-6 grid grid-rows-2"
         >
-            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center border-b border-white/10 group hover:bg-[#ff7057]/5 transition-all">
+            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center border-b border-white/10 group hover:bg-[#ffffff]/5 transition-all">
               <span className="text-4xl font-black text-white/10 group-hover:text-white transition-colors">EDGE</span>
-              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ff7057]">Latency Optimized</p>
+              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ffffff]">Latency Optimized</p>
             </div>
-            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
               <span className="text-4xl font-black text-white/10 group-hover:text-white transition-colors">CLOUD</span>
-              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ff7057]">Native Stack</p>
+              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ffffff]">Native Stack</p>
             </div>
         </motion.div>
           
@@ -48,21 +48,21 @@ export default function ScaleGrid() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="col-span-4 row-span-6 grid grid-cols-2 grid-rows-2 border-x border-[#2b2b2b]"
         >
-            <div className="bg-black p-8 border-r border-b border-white/10 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="bg-black p-8 border-r border-b border-white/10 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
                <span className="text-3xl font-black text-white/10 group-hover:text-white">99.9</span>
-               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ff7057]">Uptime SLA</p>
+               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ffffff]">Uptime SLA</p>
             </div>
-            <div className="bg-black p-8 border-b border-white/10 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="bg-black p-8 border-b border-white/10 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
               <span className="text-3xl font-black text-white/10 group-hover:text-white">API</span>
-              <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ff7057]">Full Access</p>
+              <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ffffff]">Full Access</p>
             </div>
-            <div className="bg-black p-8 border-r border-white/10 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="bg-black p-8 border-r border-white/10 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
                <span className="text-3xl font-black text-white/10 group-hover:text-white">DEV</span>
-               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ff7057]">Experience</p>
+               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ffffff]">Experience</p>
             </div>
-            <div className="bg-black p-8 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="bg-black p-8 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
                <span className="text-3xl font-black text-white/10 group-hover:text-white">SEC</span>
-               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ff7057]">Encrypted</p>
+               <p className="text-[9px] text-white/5 uppercase tracking-[0.2em] mt-1 group-hover:text-[#ffffff]">Encrypted</p>
             </div>
         </motion.div>
  
@@ -74,13 +74,13 @@ export default function ScaleGrid() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="col-span-4 row-span-6 grid grid-rows-2"
         >
-            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center border-b border-white/10 group hover:bg-[#ff7057]/5 transition-all">
+            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center border-b border-white/10 group hover:bg-[#ffffff]/5 transition-all">
               <span className="text-4xl font-black text-white/10 group-hover:text-white transition-colors">CORE</span>
-              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ff7057]">Infrastructure</p>
+              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ffffff]">Infrastructure</p>
             </div>
-            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center group hover:bg-[#ff7057]/5 transition-all">
+            <div className="row-span-1 bg-black p-12 flex flex-col items-center justify-center group hover:bg-[#ffffff]/5 transition-all">
               <span className="text-4xl font-black text-white/10 group-hover:text-white transition-colors">SDK</span>
-              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ff7057]">Open Standard</p>
+              <p className="text-[10px] text-white/5 uppercase tracking-[0.2em] mt-2 group-hover:text-[#ffffff]">Open Standard</p>
             </div>
         </motion.div>
         </div>

@@ -37,7 +37,7 @@ export default function Features() {
       <div
         className="absolute top-0 left-0 w-[40%] h-[60%] z-0"
         style={{
-          background: "radial-gradient(ellipse at center, rgba(140,90,60,0.06), transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(255,255,255,0.04), transparent 70%)",
         }}
       />
 
@@ -81,7 +81,7 @@ export default function Features() {
                   </TextifyReveal>
                 </div>
                 <div className="hidden lg:block lg:col-span-2 text-right">
-                  <span className="text-white/10 text-2xl group-hover:text-[#ff7057]/50 transition-colors duration-500">
+                  <span className="text-white/10 text-2xl group-hover:text-[#ffffff]/50 transition-colors duration-500">
                     →
                   </span>
                 </div>

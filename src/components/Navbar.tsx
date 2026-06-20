@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import BrandLogo from "./BrandLogo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 transition-all duration-500 py-4 md:py-6 px-4">
+    <nav className="fixed top-0 inset-x-0 z-50 transition-all duration-500 px-3 py-3 sm:px-4 md:py-6">
       <div className="max-w-5xl mx-auto relative group">
         {/* Glassmorphic border glow at scroll */}
         
@@ -52,9 +53,9 @@ export default function Navbar() {
             setHoveredLink(null);
           }}
           className={cn(
-            "px-6 md:px-8 py-3 rounded-full border transition-all duration-500 relative overflow-hidden",
+            "px-5 md:px-8 py-3 rounded-full border transition-all duration-500 relative overflow-hidden",
             scrolled 
-              ? "bg-[#040407]/45 backdrop-blur-[24px] border-white/[0.08] border-t-white/[0.15] shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.15),inset_0_-1px_1px_rgba(255,255,255,0.05),0_20px_50px_rgba(0,0,0,0.7)]" 
+              ? "bg-[#050505]/45 backdrop-blur-[24px] border-white/[0.08] border-t-white/[0.15] shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.15),inset_0_-1px_1px_rgba(255,255,255,0.05),0_20px_50px_rgba(0,0,0,0.7)]"
               : "bg-white/[0.01] backdrop-blur-[12px] border-white/[0.04] border-t-white/[0.08] shadow-none"
           )}
         >
@@ -83,9 +84,9 @@ export default function Navbar() {
             )}
           </AnimatePresence>
 
-          <div className="flex items-center justify-between relative z-10">
+          <div className="flex items-center justify-center md:justify-between relative z-10">
             {/* Left Side Links */}
-            <div className="flex gap-2 items-center">
+            <div className="hidden md:flex gap-2 items-center">
               {navLinksLeft.map((link) => (
                 <div 
                   key={link.id}
@@ -109,20 +110,20 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Centered Logo */}
+            {/* Centered brand */}
             <div 
               className="flex justify-center"
               onMouseEnter={() => setHoveredLink(null)}
             >
-              <Link href="/" className="group">
-                <span className="text-2xl font-black tracking-tight text-white uppercase font-syne transition-colors duration-300">
-                  VedLabs
-                </span>
-              </Link>
+              <BrandLogo
+                priority
+                imageClassName="h-6 md:h-7 w-auto"
+                className="group transition-opacity duration-300 hover:opacity-80"
+              />
             </div>
 
             {/* Right Side Links */}
-            <div className="flex gap-4 items-center justify-end">
+            <div className="hidden md:flex gap-4 items-center justify-end">
               {navLinksRight.map((link) => (
                 <div 
                   key={link.id}
@@ -154,13 +155,9 @@ export default function Navbar() {
                 <Link 
                   href="/contact" 
                   onMouseEnter={() => setHoveredLink(null)}
-                  className="relative overflow-hidden group px-6 py-2.5 text-xs font-extrabold uppercase tracking-[0.25em] font-sans rounded-full cursor-pointer text-white border border-[#ffaba0]/45 bg-[radial-gradient(circle_at_50%_20%,#ff9b85_0%,#ef4b30_45%,#b01a07_100%)] shadow-[0_6px_15px_rgba(239,75,48,0.25),inset_0_2px_3px_rgba(255,255,255,0.85),inset_0_-2px_4px_rgba(255,255,255,0.25),inset_0_-4px_8px_rgba(0,0,0,0.4)] hover:border-[#ffaba0]/70 hover:shadow-[0_12px_24px_rgba(239,75,48,0.45),inset_0_2.5px_4px_rgba(255,255,255,0.95),inset_0_-2px_4px_rgba(255,255,255,0.35),inset_0_-5px_10px_rgba(0,0,0,0.5)] transition-all duration-300 ease-out flex items-center justify-center"
+                  className="velnix-button group min-h-10 px-6 text-xs font-extrabold uppercase tracking-[0.25em] font-sans cursor-pointer"
                 >
-                  <span className="relative z-30">Contact</span>
-                  {/* White Crescent Glare - Always Visible */}
-                  <span className="absolute top-[2.5px] left-[6px] right-[6px] h-[38%] rounded-full bg-gradient-to-b from-white/80 via-white/20 to-transparent pointer-events-none opacity-90 group-hover:opacity-100 transition-all duration-300 z-10" />
-                  {/* Diagonal shimmer sheen */}
-                  <span className="absolute inset-0 w-[50%] h-full -left-[75%] skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/35 to-transparent pointer-events-none z-20 group-hover:animate-[glass-shimmer_0.85s_cubic-bezier(0.16,1,0.3,1)_forwards]" />
+                  <span className="relative z-10">Contact</span>
                 </Link>
               </motion.div>
             </div>
