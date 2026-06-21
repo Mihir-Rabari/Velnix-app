@@ -192,17 +192,10 @@ function BentoCard({ title, description, label, icon, index }: BentoCardProps) {
 
 export default function MagicBento() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-6 md:px-16 lg:px-24 py-10 md:py-12 w-full items-stretch">
+    <div className="mx-auto grid w-full max-w-[1920px] grid-cols-1 items-stretch gap-4 px-6 py-10 md:grid-cols-2 md:gap-5 md:px-16 md:py-12 lg:px-24 xl:grid-cols-4">
       {cardData.map((card, index) => {
-        let gridClass = "lg:col-span-1 lg:row-span-1";
-        if (index === 0) {
-          gridClass = "lg:col-span-2 lg:row-span-2 lg:min-h-[400px]"; // Perfect, compact height
-        } else if (index === 1) {
-          gridClass = "lg:col-span-2 lg:row-span-1";
-        }
-        
         return (
-          <div key={index} className={`${gridClass} h-full`}>
+          <div key={index} className="h-full min-h-[280px] md:min-h-[320px]">
             <BentoCard {...card} index={index} />
           </div>
         );

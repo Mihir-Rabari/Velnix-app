@@ -43,7 +43,7 @@ export default function FAQ() {
     <section id="faq" className="relative overflow-hidden bg-[#050505] border-t border-white/10">
       <div className="grid grid-cols-1 lg:grid-cols-[38%_1fr]">
         <div className="px-6 py-14 md:px-16 md:py-20 lg:px-20 xl:px-24 lg:border-r border-white/10">
-          <div className="lg:sticky lg:top-32 max-w-md">
+          <div className="max-w-md">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                   aria-controls={answerId}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="group w-full min-h-24 md:min-h-28 px-6 md:px-12 lg:px-16 py-7 flex items-center gap-5 md:gap-8 text-left hover:bg-white/[0.015] transition-colors duration-300"
+                  className="group flex min-h-20 w-full items-center gap-5 px-6 py-6 text-left transition-colors duration-300 hover:bg-white/[0.015] md:min-h-24 md:gap-8 md:px-12 lg:px-16"
                 >
                   <span className="shrink-0 font-mono text-[10px] font-bold tracking-[0.2em] text-zinc-600 group-hover:text-zinc-400 transition-colors">
                     {String(index + 1).padStart(2, "0")}

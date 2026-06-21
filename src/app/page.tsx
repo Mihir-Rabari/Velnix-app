@@ -40,7 +40,7 @@ export default function Home() {
       </section>
 
       <section className="relative bg-[#050505] overflow-hidden w-full flex flex-col section-divider">
-        <div className="px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full text-left">
+        <div className="w-full border-b border-white/10 px-6 pb-6 pt-14 text-left md:px-16 md:pb-8 md:pt-20 lg:px-24">
           <p className="text-xs font-mono font-bold tracking-[0.25em] text-zinc-500 uppercase mb-4">
             // ARCHITECTURAL MATRIX
           </p>

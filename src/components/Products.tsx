@@ -26,12 +26,12 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="relative overflow-hidden bg-[#050505] w-full min-h-[90vh] flex flex-col justify-center">
+    <section id="products" className="relative flex w-full flex-col overflow-hidden bg-[#050505]">
       
       {/* Background Red Mesh blur */}
       <div className="absolute bottom-[20%] right-[-10%] w-[400px] h-[400px] bg-[#ffffff]/3 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="flex flex-col md:flex-row md:items-end justify-between px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full">
+      <div className="flex w-full flex-col justify-between border-b border-white/10 px-6 pb-6 pt-14 md:flex-row md:items-end md:px-16 md:pb-8 md:pt-20 lg:px-24">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -68,7 +68,7 @@ export default function Products() {
               idx !== products.length - 1 ? 'border-b md:border-b-0 md:border-r' : ''
             }`}
           >
-            <div className="aspect-[16/9] bg-white/[0.015] border border-white/10 rounded-2xl flex items-center justify-center text-5xl font-black text-white/3 mb-6 group-hover:border-white/20 group-hover:bg-white/[0.04] transition-all duration-500 cursor-pointer overflow-hidden relative font-syne shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
+            <div className="relative mb-6 flex aspect-[16/8] cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.015] font-syne text-5xl font-black text-white/3 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/[0.04] xl:aspect-[16/7]">
               {product.id}
               <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>

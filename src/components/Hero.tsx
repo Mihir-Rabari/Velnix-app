@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-[1] bg-[radial-gradient(ellipse_62%_56%_at_50%_48%,transparent_0%,rgba(5,5,5,0.28)_58%,#050505_100%)]" />
       <div className="absolute inset-0 z-[1] opacity-[0.025] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_78%,transparent)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-10rem)] w-full max-w-[1180px] flex-col items-center justify-center text-center">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-10rem)] w-full max-w-[1760px] flex-col items-center justify-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,18 +59,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.08, ease: [0.23, 1, 0.32, 1] }}
-          className="font-syne text-[8.6vw] sm:text-[clamp(3rem,5.8vw,5.5rem)] font-black uppercase leading-[0.9] tracking-[-0.055em] text-white"
+          className="w-full font-syne text-[clamp(1.8rem,6.7vw,4rem)] xl:text-[clamp(3rem,3.8vw,4.25rem)] font-black uppercase leading-[0.9] tracking-[-0.055em] text-white"
         >
-          <span className="block sm:hidden">
+          <span className="block xl:hidden">
             Software for
             <br />
             <span className="text-white/62">humans + agents.</span>
             <br />
             Built to scale.
           </span>
-          <span className="hidden whitespace-nowrap sm:block">Software for humans.</span>
-          <span className="hidden whitespace-nowrap text-white/62 sm:block">Systems for agents.</span>
-          <span className="hidden whitespace-nowrap sm:block">Built to scale.</span>
+          <span className="hidden whitespace-nowrap xl:block">Software for humans.</span>
+          <span className="hidden whitespace-nowrap text-white/62 xl:block">Systems for agents.</span>
+          <span className="hidden whitespace-nowrap xl:block">Built to scale.</span>
         </motion.h1>
 
         <motion.p

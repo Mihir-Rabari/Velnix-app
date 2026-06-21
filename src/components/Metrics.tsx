@@ -63,7 +63,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "relative overflow-hidden p-8 md:p-10 lg:p-12 xl:p-16 flex flex-col justify-between group transition-all duration-500 bg-white/[0.005] hover:bg-white/[0.015] border-b border-white/10 select-none cursor-pointer",
+        "relative min-h-[320px] overflow-hidden p-8 md:p-10 lg:p-12 xl:min-h-[360px] xl:p-14 flex flex-col group transition-all duration-500 bg-white/[0.005] hover:bg-white/[0.015] border-b border-white/10 select-none cursor-pointer",
         cardIndex % 2 === 0 ? "md:border-r" : "md:border-r-0",
         cardIndex % 4 !== 3 ? "lg:border-r" : "lg:border-r-0",
         "border-white/10"
@@ -75,10 +75,10 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
         style={{ background: spotlightBg }}
       />
 
-      <div className="relative z-10 flex flex-col justify-between h-full">
+      <div className="relative z-10 flex h-full flex-col">
         <div>
           {/* Index Counter */}
-          <div className="font-mono text-xs font-bold text-[#ffffff] tracking-wider mb-8 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="mb-10 font-mono text-xs font-bold tracking-wider text-white opacity-60 transition-opacity duration-300 group-hover:opacity-100">
             // {index}
           </div>
 
@@ -94,7 +94,7 @@ function ConvictionCard({ index, title, tagline, description, cardIndex }: Convi
         </div>
 
         {/* Description */}
-        <p className="text-xs md:text-sm text-zinc-500 group-hover:text-zinc-300 transition-colors duration-500 leading-relaxed font-sans mt-4 max-w-[95%]">
+        <p className="mt-8 max-w-[95%] font-sans text-xs leading-relaxed text-zinc-500 transition-colors duration-500 group-hover:text-zinc-300 md:text-sm">
           {description}
         </p>
       </div>
@@ -107,7 +107,7 @@ export default function Metrics() {
 
   return (
     <section id="about" className="relative bg-[#050505] overflow-hidden border-t border-white/10" ref={ref}>
-      <div className="px-6 md:px-16 lg:px-24 pb-6 md:pb-8 border-b border-white/10 w-full">
+      <div className="w-full border-b border-white/10 px-6 pb-6 pt-14 md:px-16 md:pb-8 md:pt-20 lg:px-24">
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

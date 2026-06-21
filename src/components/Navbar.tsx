@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -8,15 +8,26 @@ import BrandLogo from "./BrandLogo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY.current;
+
+      setScrolled(currentScrollY > 20);
+      if (currentScrollY < 80) {
+        setIsHidden(false);
+      } else if (Math.abs(scrollDelta) > 6) {
+        setIsHidden(scrollDelta > 0);
+      }
+      lastScrollY.current = currentScrollY;
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -38,7 +49,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 transition-all duration-500 px-3 py-3 sm:px-4 md:py-6">
+    <motion.nav
+      className="fixed top-0 inset-x-0 z-50 px-3 py-3 sm:px-4 md:py-6"
+      animate={{ y: isHidden ? -120 : 0, opacity: isHidden ? 0 : 1 }}
+      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+      onFocusCapture={() => setIsHidden(false)}
+    >
       <div className="max-w-5xl mx-auto relative group">
         {/* Glassmorphic border glow at scroll */}
         
@@ -164,6 +180,6 @@ export default function Navbar() {
           </div>
         </motion.div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
